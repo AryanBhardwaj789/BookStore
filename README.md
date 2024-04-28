@@ -1,6 +1,6 @@
 # BookWise - An Online Bookstore Application
 
-BookWise is an online bookstore application developed as a Java Spring Boot project. It allows users to browse books, add them to their cart, and place orders. The application provides a user-friendly interface for managing book purchases, making it convenient for book lovers to explore and buy their favourite titles. With BookWise, users can discover new books, track their orders, and enjoy a seamless shopping experience from the comfort of their homes.
+BookWise is an online bookstore application developed as a Java Spring Boot project. It allows users to browse books, add them to their cart, and place orders. The application provides a user-friendly interface for managing book purchases, making it convenient for book lovers to explore and buy their favourite titles. With BookWise, users can discover new books, track their orders, and enjoy a seamless shopping experience from their homes.
 
 ## Features
 
