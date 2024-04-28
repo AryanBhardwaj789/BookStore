@@ -47,6 +47,16 @@ BookWise is an online bookstore application developed as a Java Spring Boot proj
 
 ## Screenshots
 
+<table>
+  <tr>
+    <td><img src="assets/Bookstore-SpringBoot-Login.png" alt="Login"></td>
+    <td><img src="assets/Bookstore-SpringBoot-Home.png" alt="Home"></td>
+    <td><img src="assets/Bookstore-SpringBoot-BooksList.png" alt="Books List"></td>
+    <td><img src="assets/Bookstore-SpringBoot-Cart.png" alt="Cart"></td>
+    <td><img src="assets/Bookstore-SpringBoot-Added.png" alt="Added"></td>
+  </tr>
+</table>
+
 ## Contributors
 
 *Aryan Bhardwaj*
