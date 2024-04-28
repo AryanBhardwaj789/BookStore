@@ -1,0 +1,204 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<style>
+	/* Web Programming course, Sheridan College, Summer 2023 
+    main.css
+*/
+
+	/* Global Styles */
+
+	body {
+		font-family: 'Arial', sans-serif;
+		margin: 0;
+		padding: 0;
+		background-color: #f5f5f5
+			/* LightGrey */
+		;
+	}
+
+	/* Header Styles */
+
+	header {
+		background-color: #333;
+		color: #fff;
+		padding: 20px;
+	}
+
+	h1 {
+		font-size: 30px;
+		margin: 0;
+		font-family: 'Roboto', sans-serif;
+	}
+
+	nav a {
+		color: #fff;
+		text-decoration: none;
+		font-size: 16px;
+	}
+
+	nav a:hover {
+		color: saddlebrown;
+		text-decoration: none;
+		font-size: 16px;
+	}
+
+	/* Main Content Styles */
+
+	main {
+		padding: 20px;
+	}
+
+	h2 {
+		font-size: 24px;
+		margin-bottom: 10px;
+		font-family: 'Roboto', sans-serif;
+	}
+
+	p {
+		line-height: 1.5;
+		font-size: 16px;
+
+	}
+
+	/* Footer Styles */
+
+	footer {
+		background-color: #333;
+		color: #fff;
+		padding: 20px;
+		position: absolute;
+		bottom: 0;
+		width: 97.2%;
+		height: 50px;
+		text-align: center;
+
+	}
+
+	.centered-footer {
+		position: relative;
+		width: 97%;
+	}
+
+	address {
+		font-style: italic;
+		font-size: 14px;
+	}
+
+	/* Image Styles */
+
+	img {
+		max-width: 450px;
+		height: auto;
+		display: block;
+		margin-top: 20px;
+	}
+
+	/* Form Styles */
+
+	form {
+		margin-top: 20px;
+	}
+
+	.content-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		min-height: 300px;
+		/* Ensure the content is at least as tall as the viewport */
+	}
+
+	label {
+		display: block;
+		margin-bottom: 10px;
+		font-weight: bold;
+	}
+
+	input[type="number"] {
+		width: 100px;
+		padding: 5px;
+		font-size: 16px;
+	}
+
+	input[type="submit"] {
+		font-weight: bold;
+	}
+
+	input[type="submit"]:hover {
+		background-color: saddlebrown;
+		font-weight: bold;
+	}
+
+	button {
+		padding: 8px 16px;
+		background-color: #333;
+		color: #fff;
+		border: none;
+		font-size: 16px;
+		cursor: pointer;
+	}
+
+	button:hover {
+		background-color: saddlebrown;
+	}
+
+
+	/* Define styles for the table */
+	table {
+		border-collapse: collapse;
+		width: 100%;
+	}
+
+	table,
+	th,
+	td {
+		border: 1px solid #333;
+	}
+
+	/* Define styles for table cells */
+	th,
+	td {
+		padding: 10px;
+		text-align: left;
+	}
+
+	/* Add styles for links */
+	a {
+		color: indianred;
+		/* Set text color to white */
+		font-weight: bolder;
+		margin-right: 50px;
+		text-decoration: none;
+		/* Remove underline from links */
+	}
+
+	/* Add a hover effect for links */
+	a:hover {
+		color: black;
+	}
+
+	.welcome {
+		height: 50px;
+		width: 50px;
+	}
+</style>
+
+<head>
+	<title>Book Details</title>
+</head>
+
+<body>
+	<table th:if="${bookList != null AND bookList != ''}">
+		<tr th:each="b : ${bookList}">
+			<td th:text="${b.title}">BookTitle</td>
+			<td th:text="${b.author}">BookAuthor</td>
+			<td th:text="${b.isbn}">123456</td>
+			<td th:text="${b.price}">12.99</td>
+			<td th:text="${b.description}">Books nourish the soul.</td>
+		</tr>
+	</table>
+	<a href="/secure/booksList">GO BACK</a>
+	<br>
+	<hr>
+	<br>
+</body>
+
+</html>

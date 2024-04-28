@@ -1,0 +1,223 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<style>
+	/* Web Programming course, Sheridan College, Summer 2023 
+    main.css
+*/
+
+	/* Global Styles */
+
+	body {
+		font-family: 'Arial', sans-serif;
+		margin: 0;
+		padding: 0;
+		background-color: #f5f5f5
+			/* LightGrey */
+		;
+	}
+
+	/* Header Styles */
+
+	header {
+		background-color: #333;
+		color: #fff;
+		padding: 20px;
+	}
+
+	h1 {
+		font-size: 30px;
+		margin: 0;
+		font-family: 'Roboto', sans-serif;
+	}
+
+	nav a {
+		color: #fff;
+		text-decoration: none;
+		font-size: 16px;
+	}
+
+	nav a:hover {
+		color: saddlebrown;
+		text-decoration: none;
+		font-size: 16px;
+	}
+
+	/* Main Content Styles */
+
+	main {
+		padding: 20px;
+	}
+
+	h2 {
+		font-size: 24px;
+		margin-bottom: 10px;
+		font-family: 'Roboto', sans-serif;
+	}
+
+	p {
+		line-height: 1.5;
+		font-size: 16px;
+		color: #333;
+	}
+
+	/* Footer Styles */
+
+	footer {
+		background-color: #333;
+		color: #fff;
+		padding: 20px;
+		position: absolute;
+		bottom: 0;
+		width: 97.2%;
+		height: 50px;
+		text-align: center;
+
+	}
+
+	.centered-footer {
+		position: relative;
+		width: 97%;
+	}
+
+	address {
+		font-style: italic;
+		font-size: 14px;
+	}
+
+	/* Image Styles */
+
+	img {
+		max-width: 450px;
+		height: auto;
+		display: block;
+		margin-top: 20px;
+	}
+
+	/* Form Styles */
+
+	form {
+		margin-top: 20px;
+	}
+
+	.content-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		min-height: 300px;
+		/* Ensure the content is at least as tall as the viewport */
+	}
+
+	label {
+		display: block;
+		margin-bottom: 10px;
+		font-weight: bold;
+	}
+
+	input[type="number"] {
+		width: 100px;
+		padding: 5px;
+		font-size: 16px;
+	}
+
+	input[type="submit"] {
+		font-weight: bold;
+	}
+
+	input[type="submit"]:hover {
+		background-color: saddlebrown;
+		font-weight: bold;
+	}
+
+	button {
+		padding: 8px 16px;
+		background-color: #333;
+		color: #fff;
+		border: none;
+		font-size: 16px;
+		cursor: pointer;
+	}
+
+	button:hover {
+		background-color: saddlebrown;
+	}
+
+
+	/* Define styles for the table */
+	table {
+		border-collapse: collapse;
+		width: 100%;
+	}
+
+	th,
+	td {
+		border: 1px solid #333;
+		padding: 10px;
+		text-align: left;
+	}
+
+	th {
+		background-color: #333;
+		color: #fff;
+	}
+
+	tr:nth-child(even) {
+		background-color: #f2f2f2;
+	}
+
+	/* Add styles for links */
+	a {
+		text-decoration: none;
+		color: blue;
+	}
+
+	/* Add a hover effect for links */
+	a:hover {
+		color: mediumvioletred;
+	}
+
+	.welcome {
+		height: 50px;
+		width: 50px;
+	}
+</style>
+
+<head>
+	<title>Books Cart</title>
+</head>
+
+<body>
+	<h1>Your Shopping Cart</h1><br>
+	<div th:if="${#lists.isEmpty(cart)}">
+		<p>Your cart is empty.</p>
+	</div>
+	<table th:if="${cart != null and not #lists.isEmpty(cart)}">
+		<tr>
+			<th>Book Title</th>
+			<th>Author</th>
+			<th>Quantity</th>
+			<th>ISBN</th>
+			<th>Price</th>
+			<th>Description</th>
+		</tr>
+		<tr th:each="book : ${cart}">
+			<td th:text="${book.title}">BookTitle</td>
+			<td th:text="${book.author}">BookAuthor</td>
+			<td>
+				<form th:action="@{'/secure/viewCart/updateQuantity/' + ${book.id}}" method="post">
+					<input type="hidden" name="id" th:value="${book.id}" />
+					<input type="number" min="1" name="quantity" th:value="${book.quantity}" />
+					<button type="submit">Update</button>
+				</form>
+			</td>
+			<td th:text="${book.isbn}">123456</td>
+			<td th:text="${book.price}">12.99</td>
+			<td th:text="${book.description}">Books nourish the soul.</td>
+		</tr>
+	</table>
+	<form th:action="@{/secure/viewCart/placeOrder}" method="post">
+		<input type="hidden" name="username" th:value="${#authentication.name}" />
+		<button type="submit">Place Order</button><br><br>
+		<a href="/secure/booksList"><b>GO BACK</b></a>
+	</form>
+</body>
+
+</html>

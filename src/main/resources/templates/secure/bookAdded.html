@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <title>Books Added!</title>
+    <style>
+        /* Global Styles */
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5; /* LightGrey */
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin: 20px 0;
+            font-family: 'Roboto', sans-serif;
+            color: black; /* Color from the previous CSS style */
+        }
+
+        p {
+            line-height: 1.5;
+            font-size: 16px;
+            color: #333;
+        }
+
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #333; /* Color from the previous CSS style */
+            color: #fff; /* Color from the previous CSS style */
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: saddlebrown; /* Color from the previous CSS style */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Your Book is Added to Cart.</h1>
+    <div>
+        <p>You can review your added book in view cart.</p>
+    </div>
+    <a href="/secure/booksList">OK</a>
+</body>
+
+</html>
