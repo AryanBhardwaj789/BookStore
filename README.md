@@ -25,19 +25,19 @@ BookWise is an online bookstore application developed as a Java Spring Boot proj
    ```bash
    git clone https://github.com/bhaaryan123/BookstoreAssignmentAryanBhardwaj.git
 
-2. Create a MySQL database named *bookstore* and import the provided _bookdata.sql_ and *userdata.sql* files to populate the initial data.
+2. Create a MySQL database named 'bookstore' and import the provided 'bookdata.sql' and 'userdata.sql' files to populate the initial data.
 
-3. Configure the MySQL connection in *application.properties*:
+3. Configure the MySQL connection in 'application.properties':
 
    spring.datasource.url=jdbc:mysql://localhost:3306/bookstore
    spring.datasource.username=your_username
    spring.datasource.password=your_password
 
-4. *Run* the application:
+4. Run the application:
 
    mvn spring-boot:run
 
-5. Access the application at *http://localhost:8080*
+5. Access the application at 'http://localhost:8080'
 
 ## Usage
 
@@ -58,7 +58,7 @@ BookWise is an online bookstore application developed as a Java Spring Boot proj
 
 ## Contributors
 
-*Aryan Bhardwaj*
+'Aryan Bhardwaj'
 
 
 
