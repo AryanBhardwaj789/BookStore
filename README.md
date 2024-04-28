@@ -59,7 +59,7 @@ BookWise is an online bookstore application developed as a Java Spring Boot proj
 
 ## Contributors
 
-'Aryan Bhardwaj'
+Aryan Bhardwaj
 
 
 
