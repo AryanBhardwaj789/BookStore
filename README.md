@@ -46,17 +46,11 @@ BookWise is an online bookstore application developed as a Java Spring Boot proj
 - View your cart and proceed to checkout to place an order.
 
 ## Screenshots
-
-<table>
-  <tr>
-    <td><img src="assets/Bookstore-SpringBoot-Login.png" alt="Login" width="200"></td>
-  </tr>
-    <td><img src="assets/Bookstore-SpringBoot-Home.png" alt="Home"></td>
-    <td><img src="assets/Bookstore-SpringBoot-BooksList.png" alt="Books List"></td>
-    <td><img src="assets/Bookstore-SpringBoot-Cart.png" alt="Cart"></td>
-    <td><img src="assets/Bookstore-SpringBoot-Added.png" alt="Added"></td>
-  </tr>
-</table>
+   <img src="assets/Bookstore-SpringBoot-Login.png" alt="Login" width="200">
+   <img src="assets/Bookstore-SpringBoot-Home.png" alt="Home">
+   <img src="assets/Bookstore-SpringBoot-BooksList.png" alt="Books List">
+   <img src="assets/Bookstore-SpringBoot-Cart.png" alt="Cart">
+   <img src="assets/Bookstore-SpringBoot-Added.png" alt="Added">
 
 ## Contributors
 
