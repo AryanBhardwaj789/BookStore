@@ -30,8 +30,8 @@ BookWise is an online bookstore application developed as a Java Spring Boot proj
 3. Configure the MySQL connection in 'application.properties':
 
    ```bash
-   spring.datasource.url=jdbc:mysql://localhost:3306/bookstore<br>
-   spring.datasource.username=your_username<br>
+   spring.datasource.url=jdbc:mysql://localhost:3306/bookstore
+   spring.datasource.username=your_username
    spring.datasource.password=your_password
 
 4. Run the application:
